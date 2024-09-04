@@ -1,0 +1,84 @@
+<html layout:decorate="~{layout}">
+
+<div layout:fragment="content" id="content">
+
+	<section>
+		<br>
+		<h1>작업공정등록</h1>
+		<br>
+		<form name="inoutForm" action="regist" method="post">
+			<table>
+				<tr>
+					<td class="align-center size-150">작업지시번호</td>
+					<td class="align-left size-300">
+						<input type="text" name="w_workno" id="w_workno">예)20200006
+					</td>
+				</tr>
+				<tr>
+					<td class="align-center">재료준비</td>
+					<td>
+						<input type="radio" name="p_p1" value="Y">완료
+						<input type="radio" name="p_p1" value="N">작업중
+					</td>
+				</tr>
+				<tr>
+					<td class="align-center">인쇄공정</td>
+					<td>
+						<input type="radio" name="p_p2" value="Y">완료
+						<input type="radio" name="p_p2" value="N">작업중
+					</td>
+				</tr>
+				<tr>
+					<td class="align-center">코팅공정</td>
+					<td>
+						<input type="radio" name="p_p3" value="Y">완료
+						<input type="radio" name="p_p3" value="N">작업중
+					</td>
+				</tr>
+				<tr>
+					<td class="align-center">합지공정</td>
+					<td>
+						<input type="radio" name="p_p4" value="Y">완료
+						<input type="radio" name="p_p4" value="N">작업중
+					</td>
+				</tr>
+				<tr>
+					<td class="align-center">접합공정</td>
+					<td>
+						<input type="radio" name="p_p5" value="Y">완료
+						<input type="radio" name="p_p5" value="N">작업중
+					</td>
+				</tr>
+				<tr>
+					<td class="align-center">포장적재</td>
+					<td>
+						<input type="radio" name="p_p6" value="Y">완료
+						<input type="radio" name="p_p6" value="N">작업중
+					</td>
+				</tr>
+				<tr>
+					<td class="align-center">최종작업일자</td>
+					<td class="align-left">
+						<input type="text" name="w_lastdate" id="w_lastdate">예)2010
+					</td>
+				</tr>
+				<tr>
+					<td class="align-center">최종작업시간</td>
+					<td class="align-left">
+						<input type="text" name="w_lasttime" id="w_lasttime">예)1300
+					</td>
+				</tr>
+				<tr>
+					<td colspan=2 class="align-center">
+						<input type="button" value="공정등록" onclick="registInout()">
+						<input type="button" value="공정수정" onclick="upInout()">
+						<input type="reset" value="다시쓰기" onclick="resetInout()">
+					</td>
+				</tr>
+			</table>
+		</form>
+	</section>
+
+</div>
+
+</html>

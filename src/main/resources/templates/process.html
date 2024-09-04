@@ -1,0 +1,41 @@
+<html layout:decorate="~{layout}">
+
+<div layout:fragment="content" id="content">
+
+	<section>
+		<br>
+		<h1>작업공정조회</h1>
+		<br>
+		<table>
+			<tr>
+				<th class="size-300 align-center">작업지시번호</th>
+				<th class="size-300 align-center">제품코드</th>
+				<th class="size-300 align-center">제품명</th>
+				<th class="size-100 align-center">준비</th>
+				<th class="size-100 align-center">인쇄</th>
+				<th class="size-100 align-center">코팅</th>
+				<th class="size-100 align-center">합지</th>
+				<th class="size-100 align-center">접합</th>
+				<th class="size-100 align-center">초장</th>
+				<th class="size-300 align-center">최종공정일자</th>
+				<th class="size-300 align-center">최종공정시간</th>
+			</tr>
+			<tr th:each="dto : ${list}" class="align-center">
+				<td th:text="${dto.w_workno}" class="align-center"></td>
+				<td th:text="${dto.p_code}" class="align-center"></td>
+				<td th:text="${dto.p_name}" class="align-center"></td>
+				<td th:text="${dto.p_p1 == 'Y'} ? '완료' : '~'" class="align-center"></td>
+				<td th:text="${dto.p_p2 == 'Y'} ? '완료' : '~'" class="align-center"></td>
+				<td th:text="${dto.p_p3 == 'Y'} ? '완료' : '~'" class="align-center"></td>
+				<td th:text="${dto.p_p4 == 'Y'} ? '완료' : '~'" class="align-center"></td>
+				<td th:text="${dto.p_p5 == 'Y'} ? '완료' : '~'" class="align-center"></td>
+				<td th:text="${dto.p_p6 == 'Y'} ? '완료' : '~'" class="align-center"></td>
+				<td th:text="${dto.w_lastdate}" class="align-center"></td>
+				<td th:text="${dto.w_lasttime}" class="align-center"></td>
+			</tr>
+		</table>
+	</section>
+
+</div>
+
+</html>

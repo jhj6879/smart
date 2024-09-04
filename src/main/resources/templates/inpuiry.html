@@ -1,0 +1,29 @@
+<html layout:decorate="~{layout}">
+
+<div layout:fragment="content" id="content">
+
+	<section>
+		<br>
+		<h1>제품조회</h1>
+		<br>
+		<table>
+			<tr>
+				<th class="size-150 align-center">제품코드</th>
+				<th class="size-400 align-center">제품명</th>
+				<th class="size-400 align-center">제품규격</th>
+				<th class="size-150 align-center">제품구분</th>
+				<th class="size-150 align-center">제품단가</th>
+			</tr>
+			<tr th:each="dto : ${list}" class="align-center">
+				<td th:text="${dto.p_code}" class="align-center"></td>
+				<td th:text="${dto.p_name}" class="align-center"></td>
+				<td th:text="${dto.p_size}" class="align-center"></td>
+				<td th:text="${dto.p_type}" class="align-center"></td>
+				<td th:text="'&#92; ' + ${#numbers.formatInteger(dto.p_price, 1, 'COMMA')}" class="align-center"></td>
+			</tr>
+		</table>
+	</section>
+
+</div>
+
+</html>
